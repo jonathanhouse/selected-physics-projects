@@ -100,7 +100,7 @@ for t in range(Nt): # overestimates running for each potential head
             head_distance = sqrt(np.dot(np.array([i,j])-np.array([N//2,N//2]),np.array([i,j])-np.array([N//2,N//2]))) # find head distance from center
             if head_distance>r: r = head_distance 
             if age>age_max: age_max = age
-            print(r)
+            print(str(round(r/(N//2)*100,2)) + '% ' + "complete") # print completion percent
             grid[i,j] = age
             break
         if 2*r<np.linalg.norm(np.array([ia,ja])-np.array([N//2,N//2])): # if head test point distance from center exceeds twice the max recorded distance, start new test point

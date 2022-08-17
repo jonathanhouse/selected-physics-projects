@@ -1,4 +1,3 @@
-from ast import excepthandler
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -17,7 +16,7 @@ c = (exx*ey-ex*exy)/(exx-pow(ex,2))
 
 least_squares = m*x + c
 
-print("plank constant: " + str(m*1.602*pow(10,-19)))
+print("planck constant: " + str(m*1.602*pow(10,-19)))
 
 plt.figure(figsize=(16,6),facecolor='gray')
 plt.plot(x,y,'ko')

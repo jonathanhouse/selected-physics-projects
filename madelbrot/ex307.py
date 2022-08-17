@@ -1,5 +1,3 @@
-from multiprocessing import managers
-from numbers import Real
 import matplotlib.pyplot as plt
 import numpy as np
 from math import sqrt,log10

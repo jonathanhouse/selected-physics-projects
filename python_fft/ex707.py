@@ -31,16 +31,17 @@ def fft2(y): # more memory effcient fft - two N arrays
     E_current = np.empty(N,complex)
     E_prev = np.empty(N,complex)
     E_prev[:] = y[:]
+    print(E_prev)
     for m in range(levels-1,-1,-1):
         for j in range(pow(2,m)):
             for k in range(int(N/pow(2,m))):
                 s = k
                 if k > int(N/pow(2,m+1))-1: s -= int(N/pow(2,m+1))
                 E_current[j+pow(2,m)*k] = E_prev[j+pow(2,m+1)*s] + exp(-i*2*pi*pow(2,m)*k/N)*E_prev[j+pow(2,m+1)*s+pow(2,m)]
-        E_prev[:] = E_current[:]
+        E_prev[:] = E_current[:] 
     return E_current
 
-np_c = pitch # numpy fft coefficents
+np_c = abs(rfft(pitch)) # numpy fft coefficents
 my_c = abs(fft2(pitch))  # my fft coefficents
 fig,axes = plt.subplots(2)
 axes[0].plot(np.arange(len(np_c)),np_c)

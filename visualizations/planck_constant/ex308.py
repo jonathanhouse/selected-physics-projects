@@ -18,7 +18,7 @@ least_squares = m*x + c
 
 print("planck constant: " + str(m*1.602*pow(10,-19)))
 
-plt.figure(figsize=(16,6),facecolor='gray')
+plt.figure(figsize=(10,6),facecolor='gray')
 plt.plot(x,y,'ko')
 plt.plot(x,least_squares)
 plt.show()

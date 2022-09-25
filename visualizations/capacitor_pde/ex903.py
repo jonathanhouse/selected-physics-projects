@@ -25,6 +25,7 @@ while acc>delta:
             if abs(curr_phi-phi[i,j]) > acc: acc = abs(curr_phi-phi[i,j])
 
 fig,ax = plt.subplots(1)
-ax.imshow(phi)
-ax.set(xticks=[],yticks=[])
+im = ax.imshow(phi)
+ax.set(xticks=[],yticks=[],title='capacitor electric charge')
+fig.colorbar(im)
 plt.show()

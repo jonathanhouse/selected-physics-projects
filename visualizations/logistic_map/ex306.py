@@ -39,7 +39,7 @@ r_final = np.array(r_final).ravel()
 
 #logistic_plot(0.501,3.64,N)
 
-plt.figure(figsize=(16,6),facecolor='gray')
-plt.style.use('seaborn-darkgrid')
+plt.figure(figsize=(10,5),facecolor='gray')
+#plt.style.use('seaborn')
 plt.scatter(r_final,x_final,s=0.1)
 plt.show()

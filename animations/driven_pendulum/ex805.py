@@ -6,8 +6,8 @@ from matplotlib.animation import FuncAnimation
 theta = 0
 l = 0.1
 C = 2
-ohm = 5
-# ohm = 10 # resonant freq case
+#ohm = 5
+ohm = 10 # resonant freq case
 t0 = 0.0
 tf = 100.0
 N = 5000
@@ -39,7 +39,7 @@ plt.show()
 
 rad = 0.01
 fig,ax = plt.subplots(1,figsize=(6,6))
-ax.set(xticks=[],yticks=[])
+ax.set(xticks=[],yticks=[],title='driven pendulum')
 ax.set_xlim(-0.2,0.2)
 ax.set_ylim(-0.2,0.2)
 

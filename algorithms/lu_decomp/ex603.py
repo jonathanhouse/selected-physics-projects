@@ -1,3 +1,11 @@
+'''
+date: 05/22/22
+exercise: 6.03
+
+desc: performs an LU decomposition to solve the matrix equation of the form ax = v, and compares the results to those
+from numpy's linalg solver 
+'''
+
 import numpy as np
 
 def lu(a,v):
@@ -22,7 +30,7 @@ def lu(a,v):
             vp[i] -= U[i,m]*vp[m]
             U[i,:] -= U[i,m]*U[m,:]
 
-    print(L @ U) # identical to np.matmul(L,U)
+    #print(L @ U) # identical to np.matmul(L,U)
 
     vp = v.copy()
     for i in range(N):
@@ -45,8 +53,8 @@ a = np.array([[4,-1,-1,-1],[-1,3,0,-1],[-1,0,3,-1],[-1,-1,-1,4]],float)
 v = np.array([5,0,5,0],float)
 #print(np.matmul(lu(a,v)[1],lu(a,v)[0])) # A = L*U 
 #print(elim(a,v)[1] @ elim(a,v)[0]) # @ is equivalent to matmul 
-print(lu(a,v))
-print(np.linalg.solve(a,v))
+print("my lu decomp:\t\t" + str(lu(a,v)))
+print("numpy's linalg solver:\t" + str(np.linalg.solve(a,v)))
 
 
 

@@ -1,3 +1,6 @@
+!date: 08/17/22
+!desc: solves the fft for the pitch.txt data, and outputs the results to be visualized 
+
 module fourier
 
     implicit none

@@ -1,5 +1,11 @@
+'''
+date: 07/01/22
+exercise: 7.07
+
+desc: computes the fft of a pitch using 2 methods, and compares them to the rfft algorithm from numpy 
+'''
 import numpy as np
-import  matplotlib.pylab as plt
+import matplotlib.pylab as plt
 from math import pi,log2
 from cmath import exp
 from numpy.fft import rfft
@@ -46,4 +52,8 @@ my_c = abs(fft2(pitch))  # my fft coefficents
 fig,axes = plt.subplots(2)
 axes[0].plot(np.arange(len(np_c)),np_c)
 axes[1].plot(np.arange(len(my_c)/2),my_c[0:int(len(my_c)/2)])
+
+axes[0].set_ylabel("numpy")
+axes[1].set_ylabel("my fft")
+
 plt.show()

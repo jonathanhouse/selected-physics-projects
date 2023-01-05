@@ -1,3 +1,10 @@
+'''
+date: 08/09/22
+exercise: 10.03
+
+desc: animates brownian motion random walk 
+'''
+
 from random import random
 import numpy as np
 import matplotlib.pyplot as plt

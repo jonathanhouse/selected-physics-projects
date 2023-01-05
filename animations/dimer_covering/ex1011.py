@@ -1,3 +1,11 @@
+'''
+date: 08/10/22
+exercise: 10.11
+
+desc: solves the dimer covering problem using a temperature to allow annealing, and animates
+the process of finding the optimal layout for dimers to maximally occuy the grid 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation 
@@ -60,7 +68,7 @@ def animate(t):
             lattice[i,j] = z
     c,dimer_indicies = count_dimers(lattice)
     dimers.set_data(dimer_indicies[:,0],dimer_indicies[:,1])
-    print(Tc,c)
+    print(str( (1-Tc/T0) * 100) + '% cooled & ' + str(c*-1) + ' dimers')
 
 anim = FuncAnimation(fig,animate,interval=10,frames=Nt)
 plt.show()

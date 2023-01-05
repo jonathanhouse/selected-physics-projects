@@ -1,3 +1,11 @@
+'''
+date: 08/03/22
+exercise: 8.15
+
+desc: solves the double pendulum system using fourth-order runge kutta, plots the system's energy over time, and animates 
+the system 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import cos,sin,pi

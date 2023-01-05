@@ -1,3 +1,10 @@
+'''
+date: 08/03/22
+exercise: 8.16
+
+desc: animates and solves the three-body problem equations using the bulirsh-stoer method to get adaptive step sizes 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation

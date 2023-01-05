@@ -1,3 +1,10 @@
+'''
+date: 07/24/22
+exercise: 8.04
+
+desc: solves the undriven, nonlinear pendulum problem using fourth-order runge-kutta, and animates the system 
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 from math import sin,radians,cos
@@ -35,7 +42,7 @@ ax.set_xlim(-0.2,0.2)
 ax.set_ylim(-0.2,0.2)
 
 rod = ax.plot([],[],lw=2,c='k',zorder=0)[0]
-ball = plt.Circle([0.5,0.5],radius=rad,zorder=1,color='gray')
+ball = plt.Circle([0.5,0.5],radius=rad,zorder=1,color='red')
 draw_ball = ax.add_patch(ball)
 
 #rod, = ax.plot([],[],lw=2)[0] # this works too

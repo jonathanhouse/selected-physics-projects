@@ -1,3 +1,10 @@
+'''
+date: 07/25/22
+exercise: 8.05
+
+desc: solves the driven pendulum problem, and animates the results for the resonant frequency case 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import sin,cos,radians

@@ -1,3 +1,10 @@
+'''
+date: 07/26/22
+exercise: 8.09 
+
+desc: solves 1-dimensional vibrational system of N masses using fourth-order runge-kutta and animates the results 
+'''
+
 import numpy as np
 import matplotlib.pylab as plt
 from math import cos

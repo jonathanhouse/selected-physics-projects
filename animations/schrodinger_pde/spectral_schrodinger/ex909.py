@@ -1,3 +1,10 @@
+'''
+date: 08/07/22
+exercise: 9.09
+
+desc: solves and animates the schrödinger wave equation using the spectral method involving discrete sine transformations 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from cmath import exp

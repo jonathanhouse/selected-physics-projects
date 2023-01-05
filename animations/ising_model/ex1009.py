@@ -1,3 +1,11 @@
+'''
+date: 08/09/22
+exercise: 10.09
+
+desc: solves and animates the ising spin problem by minimizing energies using the metropolis algorithm and 
+using temperatures to allow for annealing 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from random import random,randrange

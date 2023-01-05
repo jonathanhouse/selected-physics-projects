@@ -1,3 +1,10 @@
+'''
+date: 08/11/22
+exercise: 10.13
+
+desc: computes random walks and animates diffusion-limited aggregation behavior  
+'''
+
 from random import random,seed
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,3 +1,11 @@
+'''
+date: 08/17/22
+exercise: 9.08
+
+desc: animates and solves the schrödinger wave equation for a particle in an inpenetrable box by creating
+a fast banded matrix elimination and using the crank-nicolson method
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from cmath import exp
@@ -25,7 +33,7 @@ Nx = 1000
 L = 1e-8
 a = L/Nx
 h = 1e-18
-Nt = 1000
+Nt = 2000
 j = complex(0,1)
 
 hbar,m = 1.05457e-34,9.109e-31

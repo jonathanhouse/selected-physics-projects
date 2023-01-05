@@ -1,3 +1,10 @@
+'''
+date: 07/26/22
+exercise: 8.08
+
+desc: solve and visualize the differential equations for the orbit of a ball-bearing around a rod in free space 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import sqrt

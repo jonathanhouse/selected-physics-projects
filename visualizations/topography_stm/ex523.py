@@ -1,3 +1,11 @@
+'''
+date: 05/22/23
+exercise: 5.23
+
+desc: visualize topography and scanning tunneling microscope (stm) data using image processing 
+to view illumination from different angles by computing the partial derivatives along each direction
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import sin,cos,sqrt,pi

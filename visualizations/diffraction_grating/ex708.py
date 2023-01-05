@@ -1,3 +1,11 @@
+'''
+date: 07/04/22
+exercise: 7.08
+
+desc: visualize diffraction grating intensity by approximating the associated integral 
+using fourier transforms, and compare results to ex. 5.19
+'''
+
 from cmath import exp 
 from math import sin,pi,sqrt
 import numpy as np
@@ -22,7 +30,7 @@ I = [pow(W,2)/pow(N,2)*abs(c[k])**2 for k in range(N)]
 
 x_final = list(-1*np.array(x[::-1])) + x[:]
 I_final = I[::-1] + I
-print(x_final)
+#print(x_final)
 plt.plot(x_final,I_final)
 plt.xlim(-.05,.05)
 plt.show()

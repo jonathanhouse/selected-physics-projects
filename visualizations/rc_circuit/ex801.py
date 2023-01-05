@@ -1,3 +1,11 @@
+'''
+date: 07/23/22
+exercise: 8.01
+
+desc: solve and visualize the differential equation for a low-pass filter circuit using fourth-order
+runge-kutta method
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import floor
@@ -31,4 +39,10 @@ fig,axes = plt.subplots(3)
 axes[0].plot(t_points,v_out(0.01))
 axes[1].plot(t_points,v_out(0.1))
 axes[2].plot(t_points,v_out(1.0))
+
+axes[0].set_title("voltage across capacitor")
+axes[0].set_ylabel('RC = 0.01')
+axes[1].set_ylabel('RC = 0.01')
+axes[2].set_ylabel('RC = 0.01')
+
 plt.show()

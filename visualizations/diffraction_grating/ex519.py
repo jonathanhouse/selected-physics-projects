@@ -1,3 +1,11 @@
+'''
+date: 05/17/22
+exercise: 5.19
+
+desc: visualize diffraction gratings of different transmission functions (named q0 to q3)
+by solving solving the associated integral using gauss-legendre quadrature 
+'''
+
 from numpy import polynomial
 import numpy as np
 import matplotlib.pyplot as plt

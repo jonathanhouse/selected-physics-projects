@@ -1,12 +1,20 @@
+'''
+date: 07/26/22
+exercise: 8.07
+
+desc: solving and visualizing trajectories for a spherical cannonball of different masses using 
+fourth-order runge-kutta method. 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import pi,radians,cos,sin,sqrt
 
-R = 0.08
-m = 1
+R = 0.08 # radius of sphere 
+m = 1 # mass of sphere
 rho = 1.22 # density of air
 C = 0.47 # coeffecient of drag 
-g = 9.8
+g = 9.8 
 
 theta = radians(30)
 vx0 = 100*cos(theta)
@@ -33,16 +41,18 @@ def runge_kutta(r,f):
 
 r = runge_kutta(r,f)
 fig,ax = plt.subplots(1)
-ax.plot(r[0,:],r[1,:],c='red')
+ax.set(title='mass trajectories under air resistance')
+ax.plot(r[0,:],r[1,:],c='red',label='1 kg')
 
 m = 10
 r = runge_kutta(r,f)
-ax.plot(r[0,:],r[1,:],c='green')
+ax.plot(r[0,:],r[1,:],c='green',label='10 kg')
 
 m = 100
 r = runge_kutta(r,f)
-ax.plot(r[0,:],r[1,:],c='orange')
+ax.plot(r[0,:],r[1,:],c='orange',label='100 kg')
 
 ax.set(xlabel='x',ylabel='y',ylim=[0,300],xlim=[0,1000])
+ax.legend()
 
 plt.show()

@@ -1,3 +1,11 @@
+'''
+date: 04/23/22
+exercise: 3.08
+
+desc: estimate planck's constant using the data collected from robert millikan's experiment 
+using the method of least squares 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -16,7 +24,7 @@ c = (exx*ey-ex*exy)/(exx-pow(ex,2))
 
 least_squares = m*x + c
 
-print("planck constant: " + str(m*1.602*pow(10,-19)))
+print("planck constant fit: " + str(m*1.602*pow(10,-19)))
 
 plt.figure(figsize=(10,6),facecolor='gray')
 plt.plot(x,y,'ko')

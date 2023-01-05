@@ -1,3 +1,11 @@
+'''
+date: 07/23/22
+exercise: 8.02
+
+desc: solve the lotka-volterra differential equations associated with predator-prey interactions 
+and visualize their solution 
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -28,5 +36,9 @@ for t in range(N-1):
 fig,ax = plt.subplots(2)
 ax[0].plot(t_points,r[0,:])
 ax[1].plot(t_points,r[1,:])
+
+ax[0].set(title='predator-prey populations',ylabel='prey')
+ax[1].set(ylabel='predator',xlabel='time')
+
 plt.show()
 

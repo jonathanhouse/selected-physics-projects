@@ -1,3 +1,11 @@
+'''
+date: 08/09/22
+exercise: 10.02
+
+desc: calculates and visualizes the number of atoms in the bismuth-213 radioactive decay chain 
+(may take about 30s to load)
+'''
+
 from random import random
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,5 +37,11 @@ for nt in range(len(t_points)):
     ax.plot(t,NTl,color='blue',marker='o',markersize=1)
     ax.plot(t,NfBi,color='magenta',marker='o',markersize=1)
 
-ax.set(xlim=[0,1000],xlabel='t',ylabel='number of atoms',title='radioactive decay of 213 Bi')
+ax.plot([],[],color='k',label='213-Bi')
+ax.plot([],[],color='r',label='209-Pb')
+ax.plot([],[],color='b',label='209-Tl')
+ax.plot([],[],color='m',label='209-Bi')
+
+ax.set(xlim=[0,1000],xlabel='t',ylabel='number of atoms',title='radioactive decay of Bi-213')
+ax.legend()
 plt.show()

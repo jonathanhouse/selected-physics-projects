@@ -1,3 +1,10 @@
+'''
+date: 07/25/22
+exercise: 8.06
+
+desc: solve and plot the harmonic and anharmonic oscillator differential equations with different initial conditions, 
+and visualize the anharmonic oscillator and van der Pol oscillator phase spaces 
+'''
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -24,6 +31,7 @@ def solve(r,f):
 
 r0 = solve(r0,f)
 fig,ax = plt.subplots(4,sharex=True)
+plt.subplots_adjust(wspace=0.75)
 ax[0].plot(t_points,r0[0,:])
 
 r1 = np.empty((2,N),float)
@@ -42,10 +50,10 @@ r22[:,0] = [2,0]
 r22 = solve(r22,f_mod)
 ax[3].plot(t_points,r22[0,:])
 
-ax[0].set(ylabel='x')
-ax[1].set(ylabel='x')
-ax[2].set(ylabel='x')
-ax[3].set(ylabel='x',xlabel='t')
+ax[0].set(title='harmonic & anharmonic oscillators',ylabel='harmonic\n x(0) = 1')
+ax[1].set(ylabel='harmonic\n x(0) = 2')
+ax[2].set(ylabel='anharmonic\n x(0) = 1')
+ax[3].set(ylabel='anharmonic\n x(0) = 2',xlabel='time')
 
 plt.show()
 
@@ -94,6 +102,6 @@ fig,ax = plt.subplots()
 ax.plot(r_vdp0[0,:],r_vdp0[1,:],c='green')
 ax.plot(r_vdp1[0,:],r_vdp1[1,:],c='orange')
 ax.plot(r_vdp2[0,:],r_vdp2[1,:],c='blue')
-ax.set(xlabel='x',ylabel='dx/dt',title='van der pol phase space')
+ax.set(xlabel='x',ylabel='dx/dt',title='van der Pol oscillator phase space')
 
 plt.show()

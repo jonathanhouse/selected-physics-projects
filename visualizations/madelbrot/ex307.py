@@ -1,3 +1,10 @@
+'''
+date: 04/23/22
+exercise: 3.07
+
+desc: visualizing the mandelbrot fractal by iterating the associated critera over each point on a grid 
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 from math import sqrt,log10

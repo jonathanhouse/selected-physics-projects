@@ -1,3 +1,11 @@
+'''
+date: 09/25/22
+exercise: 9.03
+
+desc: solving and visualizing the electrostatic potential around two flat metal plates 
+enclosed in a square metal box 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 

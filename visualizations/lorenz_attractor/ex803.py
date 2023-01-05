@@ -1,3 +1,11 @@
+'''
+date: 07/23/22
+exercise: 8.03
+
+desc: solving and visualizing the differential equations associated with the lorentz attractor - 
+an example of deterministic chaos - and plot the "strange attractor" butterfly result 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 

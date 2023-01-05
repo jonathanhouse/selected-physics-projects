@@ -1,4 +1,9 @@
+'''
+date: 04/23/22
+exercise: 3.06
 
+desc: visualize the feigenbaum plot given by iterating over the logistic map equation 
+'''
 import matplotlib.pyplot as plt
 import numpy as np
 

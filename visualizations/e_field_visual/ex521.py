@@ -1,3 +1,11 @@
+'''
+date: 05/19/22
+exercise: 5.21
+
+desc: computing the electric potential surrounding two charges, and visualizing 
+the resulting electric fields via color and arrow representations 
+'''
+
 from math import pi,sqrt,atan,sin,cos
 from numpy import polynomial
 import numpy as np

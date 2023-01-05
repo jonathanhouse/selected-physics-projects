@@ -1,7 +1,14 @@
+'''
+date: 08/01/22
+exercise: 8.13
+
+desc: solving and visualizing earth's and pluto's orbits about the sun 
+using the bulirsch-stoer method with combined modified midpoint/richardson extrapolation 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import sqrt
-plt.style.use('seaborn-dark')
 
 G,M = 6.6738e-11*(3600*24*7*52)**2, 1.9891e30
 N = 52 

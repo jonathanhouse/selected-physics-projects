@@ -1,3 +1,10 @@
+'''
+date: 08/11/22
+exercise: 10.12
+
+desc: transform random points to spherical coordinates, and visualize the generated points
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from math import acos,pi,sin,cos

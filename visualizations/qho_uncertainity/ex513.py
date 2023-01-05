@@ -1,3 +1,12 @@
+'''
+date: 05/16/22
+exercise: 5/13
+
+desc: calculates and visualizes the hermite polynomials associated with the wavefunction for a quantum
+harmonic oscillator of order 0,1,2,3 & 30, and calculates the positional uncertainity for a particle using gaussian 
+quadrature 
+'''
+
 from numpy import polynomial
 import numpy as np
 import matplotlib.pyplot as plt
@@ -34,7 +43,7 @@ def uncertainity(n):
 
 colors = {0:'k-',1:'r-',2:'b-',3:'g-'}
 
-print(uncertainity(5))
+print('\nquantum uncertainity for particle at 5th level of quantum harmonic oscillator:\n<x^2> ~ ' + str(uncertainity(5)))
 
 n = np.arange(0,4)
 x = np.linspace(-4,4,N)
@@ -42,15 +51,19 @@ p = np.empty(shape=(len(x)))
 for i in range(len(n)):
     for k in range(len(x)):
         p[k] = phi(n[i],x[k])
-    plt.plot(x,p,colors[n[i]])
+    plt.plot(x,p,colors[n[i]],label='n =' + str(n[i]))
     p = np.empty(shape=(len(x)))
 
+plt.title('n-th order Hermite polynomial \nwavefunction of quantum harmonic oscillator')
+plt.legend()
 plt.show()
 
 x = np.linspace(-10,10,N)
 p = np.empty(shape=(len(x)))
 for i in range(len(x)):
     p[i] = phi(30,x[i])
+
+plt.title('order-30 Hermite polynomial wavefunction')
 plt.plot(x,p)
 plt.show()
 
